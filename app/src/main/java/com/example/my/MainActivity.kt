@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // Hello, Nikita
+        // Hello
     }
 
     fun onClickTest(view: View) {
