@@ -27,50 +27,83 @@
             app:layout_constraintGuide_end="20dp" />
 
 
-        <TextView
-            android:id="@+id/text1"
+        <EditText
+            android:id="@+id/et1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:gravity="center"
-            android:text="Введите число подписчиков"
+            android:hint="Введите число"
+            android:inputType="number"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textSize="25sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guidelineRight"
             app:layout_constraintStart_toEndOf="@id/guidelineLeft"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/et1"
+            android:id="@+id/et2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="количество подписчиков"
-            android:inputType="number"
-            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
-            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
-            app:layout_constraintTop_toBottomOf="@+id/text1" />
-
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
-            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
-            app:layout_constraintTop_toBottomOf="@+id/button"
-            android:textSize="30sp"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickTest"
-            android:text="Какой ты ютубер"
-            app:backgroundTint="#020202"
+            android:hint="Введите второе число"
+            android:inputType="number"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@id/guidelineRight"
             app:layout_constraintStart_toEndOf="@id/guidelineLeft"
             app:layout_constraintTop_toBottomOf="@+id/et1" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTest1"
+            android:text="Сложить"
+            app:backgroundTint="#020202"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/et2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTest2"
+            android:text="Вычесть"
+            app:backgroundTint="#020202"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTest3"
+            android:text="Умножить"
+            app:backgroundTint="#020202"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickTest4"
+            android:text="Разделить"
+            app:backgroundTint="#020202"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

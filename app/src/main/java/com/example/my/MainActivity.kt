@@ -15,16 +15,38 @@ class MainActivity : AppCompatActivity() {
         // Hello
     }
 
-    fun onClickTest(view: View) {
-        val edit = findViewById<EditText>(R.id.et1)
-        val textBlog = findViewById<TextView>(R.id.text2)
-        val value = edit.text.toString().toInt()
-        textBlog.text = when (value) {
-            in 0..99 -> "Ты начинающий ютубер"
-            in 100..99999 -> "Ты успешный ютубер"
-            in 10000..999999 -> "Ты популярный ютубер"
-            else -> "Ты самый лучший ютубер"
-        }
+    fun onClickTest1(view: View) {
+        val number_1 = findViewById<EditText>(R.id.et1).text.toString().toInt()
+        val number_2 = findViewById<EditText>(R.id.et2).text.toString().toInt()
+        val value = findViewById<TextView>(R.id.text1)
+        value.text = "${number_1 + number_2}"
+    }
 
+    fun onClickTest2(view: View) {
+        val number_1 = findViewById<EditText>(R.id.et1).text.toString().toInt()
+        val number_2 = findViewById<EditText>(R.id.et2).text.toString().toInt()
+        val value = findViewById<TextView>(R.id.text1)
+        value.text = "${number_1 - number_2}"
+    }
+
+    fun onClickTest3(view: View) {
+        val number_1 = findViewById<EditText>(R.id.et1).text.toString().toInt()
+        val number_2 = findViewById<EditText>(R.id.et2).text.toString().toInt()
+        val value = findViewById<TextView>(R.id.text1)
+        val button = findViewById<Button>(R.id.button1)
+        button.setOnClickListener( View.OnClickListener {
+            
+        })
+        value.text = "${number_1 * number_2}"
+    }
+
+    fun onClickTest4(view: View) {
+        val number_1 = findViewById<EditText>(R.id.et1).text.toString().toInt()
+        val number_2 = findViewById<EditText>(R.id.et2).text.toString().toInt()
+        val value = findViewById<TextView>(R.id.text1)
+        value.text = when (number_2) {
+            0 -> "На ноль делить нельзя"
+            else -> "${number_1 / number_2}"
+        }
     }
 }
